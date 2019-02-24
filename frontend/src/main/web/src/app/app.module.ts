@@ -8,13 +8,36 @@ import { CoreModule } from './core/core.module';
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { WorkloadComponent } from './workload/workload.component';
+
+import { RouterModule, Routes } from '@angular/router';
+import { LoadGenMetricsComponent } from './load-gen-metrics/load-gen-metrics.component';
+import { TrafficJvmParametersComponent } from './traffic-jvm-parameters/traffic-jvm-parameters.component';
+import { WorkloadSelectionTypeComponent } from './workload-selection-type/workload-selection-type.component';
+import { UseCasesComponent } from './use-cases/use-cases.component';
+
+import {MatTabsModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+  const appRoutes: Routes = [
+    { path: 'workload', component: WorkloadComponent },
+    { path: 'metrics', component: LoadGenMetricsComponent },
+    { path: 'jvm-parameters', component: TrafficJvmParametersComponent }
+  ];
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    WorkloadComponent,
+    LoadGenMetricsComponent,
+    TrafficJvmParametersComponent,
+    WorkloadSelectionTypeComponent,
+    UseCasesComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     CoreModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -23,9 +46,13 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
