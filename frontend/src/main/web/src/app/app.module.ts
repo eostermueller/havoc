@@ -9,9 +9,11 @@ import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule,
           MatButtonModule,
-          MatSidenavModule,
           MatIconModule,
+          MatCardModule,
+          MatSidenavModule,
           MatListModule,
+          MatPaginatorModule,
            } from '@angular/material';
 import { WorkloadComponent } from './workload/workload.component';
 
@@ -24,6 +26,8 @@ import { DeploymentComponent } from './deployment/deployment.component';
 
 import {MatTabsModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatPaginationDemoComponent } from './mat-pagination-demo/mat-pagination-demo.component';
+import { DemoCardComponent } from './demo-card/demo-card.component';
 
 
   const appRoutes: Routes = [
@@ -43,7 +47,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     TrafficJvmParametersComponent,
     WorkloadSelectionTypeComponent,
     UseCasesComponent,
-    DeploymentComponent
+    DeploymentComponent,
+    MatPaginationDemoComponent,
+    DemoCardComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -51,6 +57,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
+    MatCardModule,
+    MatPaginatorModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -59,10 +67,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatTabsModule,
     FormsModule,
     ReactiveFormsModule,
-    MatPaginatorModule,
-    PageEvent,
-    MatCardModule,
-    MatGridListModule,
   ],
   exports: [
   ],
