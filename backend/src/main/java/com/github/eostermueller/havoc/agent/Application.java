@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.swathisprasad.springboot;
+package com.github.eostermueller.havoc.agent;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
- * @author Swathi
+ * @author eostermueller
  *
  */
 @SpringBootApplication
