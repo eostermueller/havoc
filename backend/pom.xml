@@ -4,8 +4,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.swathisprasad.tutorial</groupId>
-    <artifactId>tutorial-parent</artifactId>
+    <groupId>com.github.eostermueller</groupId>
+    <artifactId>havoc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>backend</artifactId>
@@ -41,7 +41,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
       <artifactId>spring-boot-starter-integration</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.swathisprasad.tutorial</groupId>
+      <groupId>com.github.eostermueller</groupId>
       <artifactId>frontend</artifactId>
       <version>${project.version}</version>
       <scope>runtime</scope>
